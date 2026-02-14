@@ -1,77 +1,78 @@
-<<<<<<< HEAD
-# Digital-Clock
-
-A simple Digital Clock program written in C language. It displays the current system time (hours, minutes, seconds) in the terminal and updates every second.
-
-## Features
-- Real-time digital clock display.
-- Custom digit rendering using ASCII characters.
-- Updates every second.
-
-## Prerequisites
-- GCC Compiler (MinGW for Windows or standard GCC on Linux/macOS).
-- Windows OS (uses `windows.h` for cursor positioning and sleep).
-
-## How to Compile and Run
-
-1.  Open a terminal in the project directory.
-2.  Compile the code using GCC:
-    ```bash
-    gcc clock.c -o clock.exe
-    ```
-3.  Run the executable:
-    ```bash
-    ./clock.exe
-    ```
-
-## Project Structure
--   `clock.c`: The main source code file containing the logic and digit rendering functions.
--   `README.md`: This documentation file.
-=======
 # 🕒 Digital Clock in C (Windows Console)
 
-A simple **digital clock** built using **C language** that displays the current **hours, minutes, and seconds** in a large digital format directly in the **Windows console**.  
-The clock updates every second using system time.
+![Language](https://img.shields.io/badge/language-C-blue.svg) ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+A simple, aesthetically pleasing **Digital Clock** built using **C language** that displays the current **hours, minutes, and seconds** in a large digital format directly in the **Windows console**. The clock updates every second using system time.
 
 ---
 
 ## 📌 Features
 
-- ⏱ Real-time clock using system time  
-- 🔢 Large digital numbers (0–9) made with ASCII art  
-- 🔁 Auto refresh every second  
-- 🪟 Uses Windows Console APIs (`gotoxy`)  
-- 💡 Beginner-friendly C project  
+- **⏱ Real-time Accuracy**: Displays system time with second-level precision.
+- **🔢 Custom ASCII Art**: Large 7-segment display style digits rendered seamlessly.
+- **🔁 Live Updates**: Auto-refreshes every second without flickering.
+- **🪟 Windows API Integration**: Uses `windows.h` for efficient cursor positioning (`gotoxy`).
+- **💡 Clean Code**: Well-structured and commented C code, perfect for beginners.
 
 ---
 
 ## 🛠 Technologies Used
 
-- **Language:** C  
-- **Platform:** Windows  
+- **Language:** C
+- **Platform:** Windows (Command Prompt / PowerShell)
 - **Libraries:**
-  - `stdio.h`
-  - `windows.h`
-  - `time.h`
+  - `stdio.h` (Standard I/O)
+  - `windows.h` (Console manipulation)
+  - `time.h` (Time functions)
 
 ---
 
 ## ⚙ How It Works
 
-1. Fetches current system time using `time()` and `localtime()`
-2. Extracts:
-   - Hours
-   - Minutes
-   - Seconds
-3. Each digit (0–9) is printed using custom functions
-4. Cursor positioning is handled using `gotoxy()`
-5. Screen refreshes every **1 second** using `Sleep(1000)`
+1.  **Time Fetching**: Retrieves the current system time using `time()` and `localtime()`.
+2.  **Digit Extraction**: Separates hours, minutes, and seconds.
+3.  **Rendering Engine**:
+    -   Each digit (0-9) is drawn using custom ASCII patterns.
+    -   `gotoxy()` places the cursor at specific coordinates to print digits side-by-side.
+4.  **Loop & Sleep**: The main loop refreshes the display every 1000ms (`Sleep(1000)`).
 
 ---
 
 ## ▶ How to Run
 
-### Step 1: Compile
-```bash
-gcc digital_clock.c -o clock
->>>>>>> acf084f1cc484d367d3b021ef4d00e3b01e07320
+### prerequisites
+-   A C Compiler (GCC recommended, e.g., MinGW).
+-   Windows OS.
+
+### Installation & Execution
+
+1.  **Clone the Repository** (or download the zip):
+    ```bash
+    git clone https://github.com/NANDGOPALSHARMA-29/Digital-Clock.git
+    cd Digital-Clock
+    ```
+
+2.  **Compile the Code**:
+    Open your terminal in the project folder and run:
+    ```bash
+    gcc clock.c -o clock.exe
+    ```
+
+3.  **Run the Application**:
+    ```bash
+    ./clock.exe
+    ```
+
+---
+
+## 📂 Project Structure
+
+-   `clock.c`: The core logic and ASCII art definitions.
+-   `README.md`: Project documentation.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
