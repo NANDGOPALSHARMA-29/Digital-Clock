@@ -26,8 +26,7 @@ int main(){
     return 0;
 }
 void displaytime(){
-	system("cls");
-	time_t t;                 
+    time_t t;                 
     struct tm *current_time;  
 
     t = time(NULL);                 
@@ -36,15 +35,19 @@ void displaytime(){
     int min  = current_time->tm_min;
     int sec  = current_time->tm_sec;
     
+    // Display Hours
     call(hour/10,10,5);
     call(hour%10,19,5);
     colon(25,5);
+    
+    // Display Minutes
     call(min/10,31,5);
     call(min%10,40,5);
     colon(46,5);
+    
+    // Display Seconds
     call(sec/10,52,5);
     call(sec%10,61,5);
-	
 }
 void call(int digit,int x,int y){
 	switch(digit){
